@@ -1,0 +1,141 @@
+.footer {
+    background-color: $color-dark-bg;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer--flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo--footer {
+    color: $color-white;
+}
+
+.address {
+    margin-top: 28px;
+
+    &__link {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    }
+
+    &__item + .address__item {
+    margin-top: 12px;
+    }
+
+    &__link--white {
+    color: $color-white;
+    }
+}
+
+.footer-socials {
+    margin-left: 92px;
+
+    &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-style: normal;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $color-first-title;
+    }
+
+    &__list {
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    width: 206px;
+    }
+
+    &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: $color-first-title;
+    transition: background-color $duration $timing-function;
+    }
+
+    &__link:hover,
+    &__link:focus {
+    background-color: $color-akcent;
+    }
+
+    &__icon {
+    fill:currentColor;
+    }
+}
+
+.footer-form {
+    margin-left: 92px;
+
+    &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-style: normal;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $color-first-title;
+    }
+
+    &--flex {
+    display: flex;
+    }
+
+    &__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 1.03px;
+    color: rgba(255, 255, 255, 0.60);
+    background-color: transparent;
+    outline: none;
+    }
+
+    &__btn {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    font-family: inherit;
+    background-color: $color-akcent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    border: $color-akcent;
+    border-radius: 6px;
+    padding: 10px 28px;
+    margin-left: 12px;
+    min-width: 200px;
+    max-height:50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: color $duration $timing-function, background-color $duration $timing-function;
+    }
+
+    &__icon {
+    margin-left: 10px;
+    fill: $color-white;
+    }
+}

@@ -1,0 +1,210 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $duration $timing-function,  visibility $duration $timing-function;
+
+    &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    }
+
+    &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 530px;
+    min-height: 581px;
+    padding: 40px;
+    background-color: $color-white-bg;
+    border: rgba(0, 0, 0,0.1);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $duration $timing-function;
+
+    &__title {
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-secondary-title;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+    }
+
+    &__close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: $color-black;
+    background-color: transparent;
+    transition: color $duration $timing-function;
+    }
+
+    &__close-btn:hover,
+    &__close-btn:focus {
+    color: $color-akcent;
+    }
+
+    &__close-icon {
+    fill: currentColor;
+    }
+
+    &__form--flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    &__field {
+    position: relative;
+    }
+
+
+    &__input {
+    padding-left: 40px;
+    margin-top: 4px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+    transition: color $duration $timing-function;
+    }
+
+    &__input:focus {
+    border: 1px solid $color-akcent;
+    }
+
+    &__label {
+    display: block;
+    margin: 0px;
+    font-family: $main-font;
+    color: $color-text;
+    font-weight: 400;
+    font-size: 12px;
+    }
+
+    &__icon {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    transition: fill $duration $timing-function;
+    }
+
+    &__input:focus ~ &__icon {
+    fill: $color-akcent;
+    }
+
+    &__comment {
+    margin-top: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    font-family: $main-font;
+    color: rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 1.01px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    resize: none;
+    outline: none;
+    }
+
+    &__comment:focus {
+    border: 1px solid $color-akcent;
+    }
+
+    &__policy-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 1.03px;
+    color: $color-text
+    }
+
+    &__checkbox {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: opacity $duration $timing-function;
+    }
+
+    &__checkbox:checked + &__icon-check {
+    background-color: $color-akcent;
+    border: 2px solid $color-akcent;
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    }
+
+    &__checkbox:focus + &__icon-check {
+    border: 2px solid $color-akcent;
+    }
+
+    &__icon-check {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $color-secondary-title;
+    border-radius: 2px;
+    margin-right: 7px;
+    }
+
+    &__policy-link {
+    color: $color-akcent;
+    text-decoration: underline;
+    margin-left: 4px;
+    }
+
+    &__submit-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    color: $color-white;
+    font-family: inherit;
+    background-color: $color-akcent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    border: $color-akcent;
+    border-radius: 4px;
+    padding: 10px 24px;
+    min-width: 200px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: color $duration $timing-function, background-color $duration $timing-function;
+    }
+}

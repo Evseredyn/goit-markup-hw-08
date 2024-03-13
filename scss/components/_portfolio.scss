@@ -1,0 +1,112 @@
+.portfolio {
+    &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+
+    &__item + &__item {
+    margin-left: 8px;
+    }
+
+    &__btn {
+    padding: 6px 22px;
+    color: $color-secondary-title;
+    background-color: $color-bg-item;
+    text-align: center;
+    font-family: Roboto;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: color $duration $timing-function, background-color $duration $timing-function, box-shadow $duration $timing-function;
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+    color: $color-white;
+    background-color: $color-akcent;
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project {
+    width: 370px;
+
+    &__link {
+    display: block;
+    transition: $duration $timing-function;
+    }
+
+    &__link:hover,
+    &__link:focus {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    &__thumb {
+    position: relative;
+    overflow: hidden;
+    }
+
+    &__thumb::after {
+    content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";    font-family: var(--main-font);
+    color: $color-first-title;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 1.03px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform $duration $timing-function;
+    }
+
+    &__link:hover &__thumb::after,
+    &__link:focus &__thumb::after {
+    transform: translateY(-100%);
+    }
+
+    &__img {
+    display: block;
+    margin-top: 0;
+    }
+
+    &__discription {
+    padding: 20px 24px;
+    border-right: 1px solid $color-border-grey;
+    border-bottom: 1px solid $color-border-grey;
+    border-left: 1px solid $color-border-grey;
+    }
+
+    &__lable {
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: $color-secondary-title;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.08px;
+    }
+
+    &__product {
+    margin: 0;
+    padding: 0;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+    letter-spacing: 0.48px;
+    }
+}

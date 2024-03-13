@@ -1,0 +1,48 @@
+.ourwork {
+    padding-bottom: 94px;
+
+    &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    color: $color-secondary-title;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+    }
+
+    &__list {
+    display: flex;
+    }
+
+    &__item {
+    position: relative;
+    }
+
+    &__item + &__item {
+    margin-left: 30px;
+    }
+
+    &__img {
+    display: block;
+    }
+
+    &__label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 70px;
+    font-size: 14px;
+    color: $color-first-title;
+    background-color: rgba(47,48,58,0.8);
+    font-weight: 700;
+    letter-spacing: 1.03px;
+    text-transform: uppercase;
+    }
+}

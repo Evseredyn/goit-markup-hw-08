@@ -1,0 +1,39 @@
+.clients__title {
+    margin: 0;
+    margin-bottom: 50px;
+    color: $color-secondary-title;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+}
+
+.clients {
+    
+    &__list--flex {
+    display: flex;
+    gap: 30px;
+    }
+
+    &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    width: 170px;
+    color: $color-icon;
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+    transition: color $duration $timing-function, border $duration $timing-function;
+    }
+
+    &__link:hover,
+    &__link:focus {
+    color: $color-akcent;
+    border: 1px solid $color-akcent;
+    }
+    &__icon {
+    fill: currentColor;
+    }
+}  
