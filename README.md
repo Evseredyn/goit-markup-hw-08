@@ -3,4 +3,4 @@
 breakpoints:
 1. 480 px
 2. 768 px
-3. 1600 px
+3. 1200 px

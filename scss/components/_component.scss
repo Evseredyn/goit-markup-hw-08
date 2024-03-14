@@ -13,41 +13,41 @@ body {
    padding-left: 15px;
    padding-right: 15px;
 
-   // @include mq(mobile) {
-   //    width: 480px;
-   // }
-
-   // @include mq(tablet) {
-   //    width: 768px;
-   // }
-
-   // @include mq(desktop) {
-   //    padding: 94px 0;
-   // }
-
-   @media screen and (min-width: 480px) {
+   @include mq(mobile) {
       width: 480px;
    }
 
-   @media screen and (min-width: 768px) {
+   @include mq(tablet) {
       width: 768px;
    }
 
-   @media screen and (min-width: 1600px) {
-      width: 1600px;
+   @include mq(desktop) {
+      padding: 94px 0;
    }
+
+   // @media screen and (min-width: 480px) {
+   //    width: 480px;
+   // }
+
+   // @media screen and (min-width: 768px) {
+   //    width: 768px;
+   // }
+
+   // @media screen and (min-width: 1600px) {
+   //    width: 1600px;
+   // }
 }
 
 .section {
    padding: 60px 0;
 
-   // @include mq (desktop) {
-   //    padding: 94px 0;
-   // }
-
-   @media screen and (min-width: 1600px) {
+   @include mq (desktop) {
       padding: 94px 0;
    }
+
+   // @media screen and (min-width: 1600px) {
+   //    padding: 94px 0;
+   // }
 }
 .link {
    text-decoration: none;
