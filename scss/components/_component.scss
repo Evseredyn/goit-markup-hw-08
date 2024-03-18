@@ -22,7 +22,7 @@ body {
    }
 
    @include mq(desktop) {
-      padding: 94px 0;
+      width: 1200px;
    }
 
    // @media screen and (min-width: 480px) {
@@ -33,8 +33,8 @@ body {
    //    width: 768px;
    // }
 
-   // @media screen and (min-width: 1600px) {
-   //    width: 1600px;
+   // @media screen and (min-width: 1200px) {
+   //    width: 1200px;
    // }
 }
 
