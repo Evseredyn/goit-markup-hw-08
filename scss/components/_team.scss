@@ -10,10 +10,19 @@
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 1.08px;
+    @include mq(not-desktop) {
+        font-size: 28px;
+     }
     }
 
     &__list--flex {
-    display: flex;
+        @include mq(desktop) {
+            display: flex;
+         }
+         @include mq(tablet-only) {
+            flex-wrap: wrap;
+            gap: 30px;
+         }
     }
 
     &__item {
@@ -23,16 +32,40 @@
     }
 
     &__item + &__item {
-    margin-left: 30px;
+        @include mq(mobile-only) {
+            margin-top: 30px;
+         }
     }
+
+    &__item + &__item {
+        @include mq(desktop) {
+            margin-left: 30px;
+         }
+        }
 
     &__img {
     display: block;
+    // @include mq(mobile-only) {
+    //     width: 450px;
+    //     height: 460px;
+    //  }
+  
+    //  @include mq(tablet) {
+    //     width: 354px;
+    //  }
+
+    //  @include mq(desktop) {
+    //     width: 270px;
+    //  }
+    // align-items: center;
     }
 
     &__discription {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    @include mq(desktop) {
+        padding-bottom: 30px;
+     }
     }
 
     &__label {

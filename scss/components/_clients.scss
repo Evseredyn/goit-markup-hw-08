@@ -10,10 +10,13 @@
 }
 
 .clients {
-    
     &__list--flex {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+            @include mq(tablet) {
+            flex-wrap: wrap;
+        }
     }
 
     &__link {
@@ -21,7 +24,17 @@
     align-items: center;
     justify-content: center;
     height: 92px;
-    width: 170px;
+    @include mq(mobile) {
+        width: 210px;
+     }
+  
+     @include mq(tablet) {
+        width: 226px;
+     }
+
+     @include mq(desktop) {
+        width: 170px;
+     }
     color: $color-icon;
     border: 1px solid $color-icon;
     border-radius: 4px;

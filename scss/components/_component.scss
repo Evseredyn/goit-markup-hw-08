@@ -83,6 +83,6 @@ body {
 }
 
 .active {
-   color: var(--white-color);
-   background-color: var(--akcent-color);  
+   color: $color-white;
+   background-color: $color-akcent;  
 }
