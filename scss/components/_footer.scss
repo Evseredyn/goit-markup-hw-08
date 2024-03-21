@@ -11,6 +11,7 @@
 
     @include mq(tablet) {
         display: flex;
+        flex-wrap: wrap;
     }
 
     @include mq(desktop) {
@@ -24,12 +25,21 @@
 }
 
 .footer--iner {
-    width: 100%;
+    // width: 100%;
+    @include mq(tablet-only) {
+        margin: 0 165px 0 76px;
+    }
+
 }
 
-// .footer--iner .logo {
-//     text-align: center;
-// }
+.footer--iner > .logo {
+    @include mq(not-desktop) {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+}
 
 .logo--footer {
     color: $color-white;
@@ -41,19 +51,19 @@
     &__link {
         margin-left: auto;
         margin-right: auto;
-    color: rgba(255, 255, 255, 0.60);
-    font-size: 14px;
-    font-style: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 14px;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
     }
 
     &__item:not(:last-child) {
-    margin-bottom: 12px;
+        margin-bottom: 12px;
     }
 
     &__link--white {
-    color: $color-white;
+        color: $color-white;
     }
 }
 
@@ -62,8 +72,11 @@
 }
 
 .address__item {
-    display: inline-block;
-    text-align: center;
+    @include mq(not-desktop) {
+        display: block;
+        text-align: center;     
+    }
+
 }
 
 .address__link {
@@ -71,26 +84,44 @@
 }
 
 .footer-socials {
-    margin-left: 92px;
+    @include mq(mobile-only) {
+        margin-top: 60px;
+        margin-bottom: 60px;       
+    }
+    @include mq(desktop) {
+        margin-left: 92px;      
+    }
 
     &__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: $main-font;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.2;
-    font-style: normal;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $color-first-title;
+        @include mq(not-desktop) {
+            display: block;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;   
+        }
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $color-first-title;
     }
 
     &__list {
-    display: flex;
-    justify-content: space-between;
-    gap:10px;
-    width: 206px;
+        display: flex;
+        gap:10px;
+        @include mq(mobile-only) {
+            justify-content: center; 
+        }
+
+        @include mq(tablet) {
+            justify-content: space-between;
+            // width: 206px;
+        }
     }
 
     &__link {
@@ -116,33 +147,57 @@
 }
 
 .footer-form {
-    margin-left: 92px;
+    @include mq(tablet) {
+        margin-top: 60px;
+        margin-left: 150px;
+    }
+
+    @include mq(desktop) {
+        margin-left: 92px;
+    }
 
     &__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: $main-font;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.17;
-    font-style: normal;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $color-first-title;
+        @include mq(not-desktop) {
+            display: block;
+            text-align: center;
+            margin: 0px;
+        }
+
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.17;
+        font-style: normal;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $color-first-title;
     }
 
     &--flex {
-        @include mq(desktop) {
-            display: flex;
+        display: flex;
+        @include mq(not-desktop) {
+            flex-direction: column;
         }
     }
 
     &__input {
     max-width: 450px;
-    width: 100%;
-    // @include mq(mobile-only) {
-    //     width: 450px;
-    //  }
+
+    @include mq(mobile-only) {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 450px;
+     }
+
+    @include mq(tablet-only) {
+        width: 450px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     @include mq(desktop) {
         width: 358px;
@@ -162,6 +217,12 @@
     }
 
     &__btn {
+        @include mq(not-desktop) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+
     display: flex;
     align-items: center;
     color: $color-white;

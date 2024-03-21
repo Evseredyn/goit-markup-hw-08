@@ -1,8 +1,29 @@
 .portfolio {
     &__list {
     display: flex;
+
+    @include mq(mobile-only) {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+        @include mq(desktop) {
+            margin-bottom: 50px;
+        }
+    }
+    &__item {
+        @include mq(mobile-only) {
+            margin-bottom: 15px;
+        }
+    }
+    
+    &__item:nth-child(3) {
+        @include mq(mobile-only) {
+            margin-right: 80px;
+        }
     }
 
     &__item + &__item {
@@ -36,13 +57,29 @@
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .project {
-    width: 370px;
+    max-width: 450px;
+    
+    &:not(:last-child) {
+        @include mq(mobile-only) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include mq(tablet-only) {
+        width: 354px;
+    }
+
+    @include mq(desktop) {
+        width: 370px;
+    }
 
     &__link {
     display: block;
