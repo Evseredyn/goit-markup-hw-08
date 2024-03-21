@@ -13,22 +13,22 @@
 .features__item {
     @include mq(mobile) {
         width: 450px;
-     }
+    }
   
-     @include mq(tablet) {
+    @include mq(tablet) {
         width: 354px;
-     }
+    }
 
-     @include mq(desktop) {
+    @include mq(desktop) {
         width: 270px;
-     }
-     &:not(:last-child) {
+    }
+    &:not(:last-child) {
         @include mq(mobile-only) {
             margin-bottom: 30px;
-         }
+        }
          @include mq(desktop) {
             margin-right: 30px;
-         }
+        }
     }
 }
 
