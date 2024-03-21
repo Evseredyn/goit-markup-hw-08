@@ -2,22 +2,35 @@
     &__nav {
         @include mq(tablet) {
             display: none;
-         }
-    position: fixed;
-    top: 0;
-    left: 0;width: 100%;
-    height: 100%;
-    padding: 48px 40px;
-    background-color: $color-white-bg;
-    display: flex;
-    flex-direction: column;
+        }
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 40px;
+        background-color: $color-white-bg;
+        display: flex;
+        flex-direction: column;
     }
+    
+    &__nav.is-hidden {
+        // transform: translateX(100%);
+
+
+        visibility: hidden;
+        // opacity: 0;
+        // pointer-events: none;
+    }
+
     &__list {
     }
     
     &__item {
     margin-bottom: 32px;
     }
+
     &__item:last-child {
         margin-bottom: 0;
     }
@@ -51,16 +64,16 @@
         background-color: transparent;
         border: none;
         transition: color $duration $timing-function;
-        }
+    }
     
-        &__close-btn:hover,
-        &__close-btn:focus {
+    &__close-btn:hover,
+    &__close-btn:focus {
         color: $color-akcent;
-        }
+    }
     
-        &__close-icon {
+    &__close-icon {
         fill: currentColor;
-        }
+    }
 }
 
 .mobile-contacts__list {
@@ -86,6 +99,7 @@
 
 .mobile-socials__list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .mobile-socials__item {

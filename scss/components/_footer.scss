@@ -5,8 +5,14 @@
 }
 
 .footer--flex {
-    display: flex;
-    align-items: baseline;
+    @include mq(tablet) {
+        display: flex;
+        align-items: baseline;
+     }
+}
+
+.footer--iner .logo {
+    display: inline-block;
 }
 
 .logo--footer {
@@ -17,6 +23,8 @@
     margin-top: 28px;
 
     &__link {
+        margin-left: auto;
+        margin-right: auto;
     color: rgba(255, 255, 255, 0.60);
     font-size: 14px;
     font-style: normal;
@@ -24,8 +32,8 @@
     letter-spacing: 0.42px;
     }
 
-    &__item + .address__item {
-    margin-top: 12px;
+    &__item:not(:last-child) {
+    margin-bottom: 12px;
     }
 
     &__link--white {

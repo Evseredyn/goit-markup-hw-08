@@ -3,6 +3,7 @@
 }
 
 .header-flex {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -10,18 +11,34 @@
 .logo {
     color: $color-akcent;
     font-family: $secondary-font;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.38;
-    letter-spacing: 0.78px;
-
+    letter-spacing: 0.03em;
+    
+    @include mq(desktop) {
+        font-size: 26px;
+    }
+    
+    @include mq(mobile-only) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
     &--header {
     color: $color-black;
     }
 }
 
 .site-nav {
-    margin-left: 93px;
+    margin-left: 87px;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+    @include mq(desktop) {
+        margin-left: 92px;
+     }
 
     &__list {
     display: flex;
@@ -44,7 +61,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     transition: $duration $timing-function;
     }
 
@@ -76,21 +93,29 @@
 }
 
 .contacts {
-    display: flex;
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+    }
     margin-left: auto;
     
     &__link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--text-color);
     font-family: inherit;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
-    letter-spacing: 0.28px;
+    letter-spacing: 0.02em;
     transition: color $duration $timing-function;
+    @include mq(desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
     }
 
     &__link:hover,
@@ -98,12 +123,45 @@
     color: $color-akcent;
     }
 
-    &__item + &__item {
-    margin-left: 40px;
+    &__item:not(:last-child) {
+        @include mq(tablet-only) {
+            margin-bottom: 10px;
+        }
+        @include mq(desktop) {
+            margin-right: 40px;
+        }
     }
 
     &__icon--start {
     margin-right: 10px;
     fill: currentColor;
     }
+}
+
+
+.mob-menu {
+    &__btn {
+        @include mq(tablet) {    
+            display: none;
+        }
+    
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $color-black;
+        transition: color $duration $timing-function;
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+        color: $color-akcent;
+    }
+}
+.mob-menu__icon {
+    fill: currentColor;
 }
