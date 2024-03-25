@@ -1426,14 +1426,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 11;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu__nav {
     display: none;
   }
 }
-.mobile-menu__nav.is-hidden {
-  visibility: hidden;
+.mobile-menu__nav.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .mobile-menu__item {
   margin-bottom: 32px;

@@ -13,15 +13,13 @@
         background-color: $color-white-bg;
         display: flex;
         flex-direction: column;
+        z-index: 11;
+        transform: translateX(100%);
+        transition: $duration $timing-function;
     }
     
-    &__nav.is-hidden {
-        // transform: translateX(100%);
-
-
-        visibility: hidden;
-        // opacity: 0;
-        // pointer-events: none;
+    &__nav.is-open {
+        transform: translateX(0);
     }
 
     &__list {
