@@ -23,8 +23,15 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    min-width: 530px;
-    min-height: 581px;
+    min-width: 450px;
+    min-height: 609px;
+    
+    @include mq(desktop) {
+        min-width: 530px;
+        min-height: 581px;
+    }
+
+    transform: translate(-50%, -50%) scale(1);
     padding: 40px;
     background-color: $color-white-bg;
     border: rgba(0, 0, 0,0.1);
@@ -37,6 +44,13 @@
     font-family: $main-font;
     font-size: 20px;
     font-weight: 700;
+    line-height: 1.17;
+    
+    @include mq(desktop) {
+        line-height: 1.5;
+    }
+
+    letter-spacing: 0.03em;
     color: $color-secondary-title;
     text-align: center;
     margin: 0;
@@ -104,6 +118,8 @@
     color: $color-text;
     font-weight: 400;
     font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
     }
 
     &__icon {
@@ -127,7 +143,8 @@
     color: rgba(117, 117, 117, 0.5);
     font-weight: 400;
     font-size: 12px;
-    letter-spacing: 1.01px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     resize: none;
@@ -145,10 +162,14 @@
     margin-top: 10px;
     margin-bottom: 20px;
     font-family: $main-font;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: 1.03px;
+    line-height: 1.17;
+    @include mq(desktop) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    // letter-spacing: 1.03px;
     color: $color-text
     }
 
