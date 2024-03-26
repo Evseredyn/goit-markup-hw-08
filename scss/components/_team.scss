@@ -16,14 +16,17 @@
     }
 
     &__list--flex {
+        @include mq(tablet) {
+           display: flex;
+           flex-wrap: wrap;
+        //    flex-basis: 354px;
+           gap: 30px;
+        }
+
         @include mq(desktop) {
-            display: flex;
-         }
-         @include mq(tablet-only) {
-            flex-wrap: wrap;
-            flex-basis: 50%;
-            gap: 30px;
-         }
+            flex-wrap: nowrap;
+        }
+        
     }
 
     &__item {
@@ -46,19 +49,19 @@
 
     &__img {
     display: block;
-    // @include mq(mobile-only) {
-    //     width: 450px;
-    //     height: 460px;
-    //  }
+    @include mq(mobile-only) {
+        width: 450px;
+        height: 460px;
+     }
   
-    //  @include mq(tablet) {
-    //     width: 354px;
-    //  }
+     @include mq(tablet) {
+        width: 354px;
+     }
 
-    //  @include mq(desktop) {
-    //     width: 270px;
-    //  }
-    // align-items: center;
+     @include mq(desktop) {
+        width: 270px;
+     }
+    align-items: center;
     }
 
     &__discription {

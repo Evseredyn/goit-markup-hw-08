@@ -66,7 +66,7 @@
 
 .project {
     max-width: 450px;
-    
+
     &:not(:last-child) {
         @include mq(mobile-only) {
             margin-bottom: 30px;
@@ -136,7 +136,7 @@
     line-height: 2;
     letter-spacing: 0.06em;
     }
-
+    
     &__product {
     margin: 0;
     padding: 0;
@@ -145,5 +145,11 @@
     font-weight: 400;
     line-height: 1.87;
     letter-spacing: 0.48px;
+    }
+
+    &__product.correct {
+        @include mq(tablet-only) {
+            margin-bottom: 35px;
+        }
     }
 }

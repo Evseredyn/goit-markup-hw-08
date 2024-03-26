@@ -89,15 +89,60 @@
             <h2 class="ourwork__title">Чим ми займаємося</h2>
             <ul class="ourwork__list list">
                 <li class="ourwork__item">
-                    <img class="ourwork__img" src="./images/box-1.jpg" alt="розробка сайтів" width="370" height="294">
+                    <picture>
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-1.webp 1x, ./images/ourwork/ourwork-1@2x.webp 2x"
+                        type="image/webp">
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-1.jpg 1x, ./images/ourwork/ourwork-1@2x.jpg 2x"
+                        type="image/jpg">
+                        <img class="ourwork__img"
+                        src="./images/ourwork/ourwork-1.jpg"
+                        alt="розробка сайтів"
+                        width="370"
+                        height="294"
+                        loading="lazy">
+                    </picture>
                     <h3 class="ourwork__label">Десктопні додатки</h3>
                 </li>
                 <li class="ourwork__item">
-                    <img class="ourwork__img" src="./images/box-2.jpg" alt="розробка додатків" width="370" height="294">
+                    <picture>
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-2.webp 1x, ./images/ourwork/ourwork-2@2x.webp 2x"
+                        type="image/webp">
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-2.jpg 1x, ./images/ourwork/ourwork-2@2x.jpg 2x"
+                        type="image/jpg">
+                        <img class="ourwork__img"
+                        src="./images/ourwork/ourwork-2.jpg"
+                        alt="розробка сайтів"
+                        width="370"
+                        height="294"
+                        loading="lazy">
+                    </picture>
                     <h3 class="ourwork__label">Мобільні додатки</h3>
                 </li>
                 <li class="ourwork__item">
-                    <img class="ourwork__img" src="./images/box-3.jpg" alt="послуги дизайнера" width="370" height="294">
+                    <picture>
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-3.webp 1x, ./images/ourwork/ourwork-3@2x.webp 2x"
+                        type="image/webp">
+                        <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/ourwork/ourwork-3.jpg 1x, ./images/ourwork/ourwork-3@2x.jpg 2x"
+                        type="image/jpg">
+                        <img class="ourwork__img"
+                        src="./images/ourwork/ourwork-3.jpg"
+                        alt="розробка сайтів"
+                        width="370"
+                        height="294"
+                        loading="lazy">
+                    </picture>
                     <h3 class="ourwork__label">Дизайнерські рішення</h3>
                 </li>
             </ul>
@@ -106,13 +151,240 @@
 <!--Team-->
         <section class="team section">
             <div class="container">
-            <h2 class="team__title">Наша команда</h2>
-            <ul class="team__list--flex list">
-                <li class="team__item">
-                    <img class="team__img" src="images/spec-1.jpg" alt="Product Designer" width="270" height="260">
-                    <div class="team__discription">
-                        <h3 class="team__label">Ігор Дем'яненко</h3>
-                        <p class="team__position">Product Designer</p>
+                <h2 class="team__title">Наша команда</h2>
+                <ul class="team__list--flex list">
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-1_lg.webp 1x, ./images/team-1_lg@2x.webp 2x" 
+                            type="image/webp">
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-1_lg.jpg 1x, ./images/team-1_lg@2x.jpg 2x" 
+                            type="image/jpg">
+    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-1_md.webp 1x, ./images/team-1_md@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-1_md.jpg 1x, ./images/team-1_md@2x.jpg 2x"
+                            type="image/jpg">
+    
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-1_sm.webp 1x, ./images/team-1_sm@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-1_sm.jpg 1x, ./images/team-1_sm@2x.jpg 2x"
+                            type="image/jpg">
+                            
+                            <img class="team__img"
+                            src="images/team/team-1_lg.jpg"
+                            alt="Product Designer"
+                            width="270" 
+                            height="260"
+                            loading="lazy">
+                        </picture>
+                        <!-- <img class="team__img" src="images/spec-1.jpg" alt="Product Designer" width="270" height="260"> -->
+                        <div class="team__discription">
+                            <h3 class="team__label">Ігор Дем'яненко</h3>
+                            <p class="team__position">Product Designer</p>
+                                <ul class="team-socials list">
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </li>
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-2_lg.webp 1x, ./images/team-2_lg@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-2_lg.jpg 1x, ./images/team-2_lg@2x.jpg 2x"
+                            type="image/jpg">
+    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-2_md.webp 1x, ./images/team-2_md@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-2_md.jpg 1x, ./images/team-2_md@2x.jpg 2x"
+                            type="image/jpg">
+    
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-2_sm.webp 1x, ./images/team-2_sm@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-2_sm.jpg 1x, ./images/team-2_sm@2x.jpg 2x"
+                            type="image/jpg">
+                            
+                            <img class="team__img"
+                            src="images/team/team-2_lg.jpg"
+                            alt="Product Designer"
+                            width="270" 
+                            height="260"
+                            loading="lazy">
+                        </picture>
+                        <!-- <img class="team__img" src="images/spec-2.jpg" alt="Frontend Developer" width="270" height="260"> -->
+                        <div class="team__discription">
+                            <h3 class="team__label">Ольга Рєпіна</h3>
+                            <p class="team__position">Frontend Developer</p>
+                                <ul class="team-socials list">
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>                     
+                        </div>
+                    </li>
+                    <li class="team__item">                    
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-3_lg.webp 1x, ./images/team-3_lg@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-3_lg.jpg 1x, ./images/team-3_lg@2x.jpg 2x"
+                            type="image/jpg">
+        
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-3_md.webp 1x, ./images/team-3_md@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-3_md.jpg 1x, ./images/team-3_md@2x.jpg 2x"
+                            type="image/jpg">
+        
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-3_sm.webp 1x, ./images/team-3_sm@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-3_sm.jpg 1x, ./images/team-3_sm@2x.jpg 2x"
+                            type="image/jpg">
+                            
+                            <img class="team__img"
+                            src="images/team/team-3_lg.jpg"
+                            alt="Product Designer"
+                            width="270" 
+                            height="260"
+                            loading="lazy">
+                        </picture>
+                        <!-- <img class="team__img" src="images/spec-3.jpg" alt="Marketing" width="270" height="260"> -->
+                        <div class="team__discription">
+                            <h3 class="team__label">Микола Тарасов</h3>
+                            <p class="team__position">Marketing</p>
+                                <ul class="team-socials list">
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="team-socials__item">
+                                        <a class="team-socials__link" href="">
+                                            <svg class="team-socials__icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </li>
+                    <li class="team__item">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-4_lg.webp 1x, ./images/team-4_lg@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/team/team-4_lg.jpg 1x, ./images/team-4_lg@2x.jpg 2x"
+                            type="image/jpg">
+        
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-4_md.webp 1x, ./images/team-4_md@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(min-width: 768px)"
+                            srcset="./images/team/team-4_md.jpg 1x, ./images/team-4_md@2x.jpg 2x"
+                            type="image/jpg">
+        
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-4_sm.webp 1x, ./images/team-4_sm@2x.webp 2x"
+                            type="image/webp">
+                            <source media="(max-width: 767px)"
+                            srcset="./images/team/team-4_sm.jpg 1x, ./images/team-4_sm@2x.jpg 2x"
+                            type="image/jpg">
+                            
+                            <img class="team__img"
+                            src="images/team/team-4_lg.jpg"
+                            alt="Product Designer"
+                            width="270" 
+                            height="260"
+                            loading="lazy">
+                        </picture>
+                        <!-- <img class="team__img" src="images/spec-4.jpg" alt="UI Designer" width="270" height="260"> -->
+                        <div class="team__discription">
+                            <h3 class="team__label">Михайло Єрмаков</h3>
+                            <p class="team__position">UI Designer</p>
                             <ul class="team-socials list">
                                 <li class="team-socials__item">
                                     <a class="team-socials__link" href="">
@@ -121,142 +393,31 @@
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
+                                 <li class="team-socials__item">
+                                     <a class="team-socials__link" href="">
+                                         <svg class="team-socials__icon" width="20" height="20">
                                             <use href="./images/icons.svg#icon-twitter"></use>
                                         </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
+                                      </a>
+                                  </li>
+                                  <li class="team-socials__item">
+                                      <a class="team-socials__link" href="">
+                                          <svg class="team-socials__icon" width="20" height="20">
+                                             <use href="./images/icons.svg#icon-facebook"></use>
+                                          </svg>
+                                      </a>
+                                   </li>
+                                  <li class="team-socials__item">
+                                      <a class="team-socials__link" href="">
                                         <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                               <use href="./images/icons.svg#icon-linkedin"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                    </div>
-                </li>
-                <li class="team__item">
-                    <img class="team__img" src="images/spec-2.jpg" alt="Frontend Developer" width="270" height="260">
-                    <div class="team__discription">
-                        <h3 class="team__label">Ольга Рєпіна</h3>
-                        <p class="team__position">Frontend Developer</p>
-                            <ul class="team-socials list">
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>                     
-                    </div>
-                </li>
-                <li class="team__item">
-                    <img class="team__img" src="images/spec-3.jpg" alt="Marketing" width="270" height="260">
-                    <div class="team__discription">
-                        <h3 class="team__label">Микола Тарасов</h3>
-                        <p class="team__position">Marketing</p>
-                            <ul class="team-socials list">
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team-socials__item">
-                                    <a class="team-socials__link" href="">
-                                        <svg class="team-socials__icon" width="20" height="20">
-                                            <use href="./images/icons.svg#icon-linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                    </div>
-                </li>
-                <li class="team__item">
-                    <img class="team__img" src="images/spec-4.jpg" alt="UI Designer" width="270" height="260">
-                    <div class="team__discription">
-                        <h3 class="team__label">Михайло Єрмаков</h3>
-                        <p class="team__position">UI Designer</p>
-                        <ul class="team-socials list">
-                            <li class="team-socials__item">
-                                <a class="team-socials__link" href="">
-                                    <svg class="team-socials__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                             <li class="team-socials__item">
-                                 <a class="team-socials__link" href="">
-                                     <svg class="team-socials__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-twitter"></use>
-                                    </svg>
-                                  </a>
-                              </li>
-                              <li class="team-socials__item">
-                                  <a class="team-socials__link" href="">
-                                      <svg class="team-socials__icon" width="20" height="20">
-                                         <use href="./images/icons.svg#icon-facebook"></use>
-                                      </svg>
-                                  </a>
-                               </li>
-                              <li class="team-socials__item">
-                                  <a class="team-socials__link" href="">
-                                    <svg class="team-socials__icon" width="20" height="20">
-                                           <use href="./images/icons.svg#icon-linkedin"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                       </ul>
-                    </div>
-                </li>
-            </ul>
+                           </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 <!--Clients-->
