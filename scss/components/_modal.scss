@@ -23,9 +23,16 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    min-width: 450px;
-    min-height: 609px;
-    
+    @media screen and (max-width: 479px) {
+        min-width: 95%;
+        min-height: 609px;
+    }
+
+    @include mq(mobile) {
+        width: 450px;
+        min-height: 609px;
+    }
+
     @include mq(desktop) {
         min-width: 530px;
         min-height: 581px;

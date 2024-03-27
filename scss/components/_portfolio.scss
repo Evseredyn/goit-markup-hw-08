@@ -20,14 +20,20 @@
         }
     }
     
-    &__item:nth-child(3) {
-        @include mq(mobile-only) {
-            margin-right: 80px;
-        }
-    }
+    // &__item:nth-child(3) {
+    //     @include mq(mobile-only) {
+    //         margin-right: 20px;
+    //     }
+    // }
 
     &__item + &__item {
     margin-left: 8px;
+    }
+    
+    &__item:not(:nth-child(4)) {
+        @include mq(mobile-only) {
+            margin-left: 8px;
+        }
     }
 
     &__btn {
@@ -41,7 +47,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.62;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.03em;
     cursor: pointer;
     border: none;
     border-radius: 4px;
@@ -57,19 +63,21 @@
 }
 
 .projects {
-    @include mq(tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include mq(mobile-only) {
+        display: block;
     }
 }
 
 .project {
     max-width: 450px;
-
+    // height: 415px;
     &:not(:last-child) {
         @include mq(mobile-only) {
             margin-bottom: 30px;
+
         }
     }
 
@@ -97,6 +105,7 @@
     }
 
     &__thumb::after {
+        height: 294px;
     content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";    font-family: var(--main-font);
     color: $color-first-title;
     font-size: 18px;
@@ -110,13 +119,13 @@
     transition: transform $duration $timing-function;
     }
 
-    &__link:hover &__thumb::after,
-    &__link:focus &__thumb::after {
+    &__link:hover > &__thumb::after,
+    &__link:focus > &__thumb::after {
     transform: translateY(-100%);
     }
 
     &__img {
-    display: block;
+    // display: block;
     margin-top: 0;
     }
 
@@ -144,12 +153,12 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.87;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.03em;
     }
 
     &__product.correct {
         @include mq(tablet-only) {
-            margin-bottom: 35px;
+            margin-bottom: 36px;
         }
     }
 }

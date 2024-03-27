@@ -13,29 +13,44 @@
     &__list--flex {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: auto;
+    // flex-basis: auto;
     gap: 30px;
-            @include mq(tablet) {
+        @include mq(tablet) {
             flex-wrap: wrap;
         }
     }
     
+    &__item {
+        // @media screen and (max-width: 479px) {
+        //     width: calc(100/2-15px);
+        // }
+        @include mq(mobile) {
+           width: 210px;
+        }
+       
+        @include mq(tablet) {
+           width: 226px;
+        }   
+        @include mq(desktop) {
+           width: 170px;
+        }
+    }
+
     &__link {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 92px;
-    @include mq(mobile) {
-        width: 210px;
-     }
-  
-     @include mq(tablet) {
-        width: 226px;
-     }
-
-     @include mq(desktop) {
-        width: 170px;
-     }
+    // @include mq(mobile) {
+    //    width: 210px;
+    // }
+   
+    // @include mq(tablet) {
+    //    width: 226px;
+    // }   
+    // @include mq(desktop) {
+    //    width: 170px;
+    // }
     color: $color-icon;
     border: 1px solid $color-icon;
     border-radius: 4px;
