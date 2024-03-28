@@ -44,7 +44,8 @@
     display: flex;
     }
 
-    &__item:hover {
+    &__item:hover,
+    &__item:focus {
     color: $color-akcent;
     }
 
