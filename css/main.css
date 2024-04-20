@@ -445,7 +445,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #2196F3;
+  color: #757575;
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -527,11 +527,6 @@ img {
 @media screen and (min-width: 768px) {
   .hero {
     width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    width: 1200px;
   }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
