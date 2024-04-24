@@ -110,6 +110,10 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $color-first-title;
+
+        @include mq(desktop) {
+            text-align: start;
+        }
     }
 
     &__list {
@@ -169,6 +173,10 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $color-first-title;
+
+        @include mq(desktop) {
+            text-align: start;
+        }
     }
 
     &--flex {
