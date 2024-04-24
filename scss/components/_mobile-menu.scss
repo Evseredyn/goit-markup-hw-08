@@ -82,7 +82,7 @@
 
     &__phone {
         display: inline-block;
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 500;
         line-height: 1.17;
         letter-spacing: 0.02em;
@@ -111,11 +111,18 @@
     }
 
     &__item {
-        margin-right: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: solid 1px rgba($color-secondary-title, $alpha: 0.2);
     }
 
     &__item:last-child {
-        margin-right: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+    &__item:first-child {
+        padding-left: 0;
     }
 
     &__link {

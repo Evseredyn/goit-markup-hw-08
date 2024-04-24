@@ -118,11 +118,16 @@
         padding: 63px 24px;
         background-color: rgba(33, 150, 243, 0.9);
         transition: transform $duration $timing-function;
+        overflow-y: scroll;
     }
 
     &__link:hover > &__thumb::after,
     &__link:focus > &__thumb::after {
-        transform: translateY(-100%);
+        transform: translateY(-90%);
+
+        @include mq(mobile) {
+            transform: translateY(-100%);
+          }
     }
 
     &__img {

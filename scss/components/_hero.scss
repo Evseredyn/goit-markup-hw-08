@@ -55,23 +55,21 @@
     padding-bottom: 200px;
 
     &__title {
-        margin: 0 auto;
-        margin-bottom: 30px;
-        color: $color-first-title;
-        @include mq(not-desktop) {
-            width: 390px;
-            font-size: 26px;
-            line-height: 1.6;
-         }
-    
-         @include mq(desktop) {
-            width: 700px;
-            font-size: 44px;
-            line-height: 1.36;
-         }
-        font-weight: 900;
-        letter-spacing: 2.64px;
-        text-transform: uppercase;
+       margin: 0 auto;
+       margin-bottom: 30px;
+       color: $color-first-title;
+       width: 85%;
+       font-size: 26px;
+       line-height: 1.6;
+       font-weight: 900;
+       letter-spacing: 0.06em;
+       text-transform: uppercase;
+            
+      @include mq(desktop) {
+         width: 700px;
+         font-size: 44px;
+         line-height: 1.36;
+      }
     }
 
     &__btn {
