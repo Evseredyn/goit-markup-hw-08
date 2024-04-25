@@ -1678,6 +1678,9 @@ img {
 
 .project {
   max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media screen and (max-width: 767.98px) {
   .project:not(:last-child) {
@@ -1746,16 +1749,18 @@ img {
   margin-top: 0;
 }
 .project__discription {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
 }
-.project__discription:first-child {
-  padding: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.project__discription:nth-child(1) {
+  background-color: aqua;
+  -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
 }
 .project__lable {
   margin-top: 0;

@@ -73,7 +73,8 @@
 
 .project {
     max-width: 450px;
-    // height: 415px;
+    display: flex;
+
     &:not(:last-child) {
         @include mq(mobile-only) {
             margin-bottom: 30px;
@@ -136,15 +137,16 @@
     }
 
     &__discription {
+        flex-grow: 1;
         padding: 20px 24px;
         border-right: 1px solid $color-border-grey;
         border-bottom: 1px solid $color-border-grey;
         border-left: 1px solid $color-border-grey;
     }
 
-    &__discription:first-child {
-        padding: 0;
-        flex-grow: 1;
+    &__discription:nth-child(1) {
+        background-color: aqua;
+        flex-basis: 350px;
     }
 
     // @include mq(tablet-only) {
@@ -175,4 +177,5 @@
 
 // .project__discription.super {
 //     flex-grow: 1;
+//     flex-basis: 150px;
 // }
