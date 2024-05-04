@@ -78,7 +78,6 @@
     &:not(:last-child) {
         @include mq(mobile-only) {
             margin-bottom: 30px;
-
         }
     }
 
@@ -107,28 +106,38 @@
     }
 
     &__thumb::after {
-        height: 294px;
+        // height: 294px;
+        height: 100%;
         content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";    font-family: var(--main-font);
         color: $color-first-title;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.55;
         letter-spacing: 0.03em;
         position: absolute;
         top: 100%;
         left: 0;
-        padding: 63px 24px;
+        padding: 10%;
         background-color: rgba(33, 150, 243, 0.9);
         transition: transform $duration $timing-function;
         overflow-y: scroll;
+
+        @include mq(tablet) {
+            font-size: 16px;
+            padding: 63px 24px;
+        }
+
+        @include mq(desktop) {
+            font-size: 18px;
+        }
     }
 
     &__link:hover > &__thumb::after,
     &__link:focus > &__thumb::after {
-        transform: translateY(-90%);
+        transform: translateY(-100%);
 
-        @include mq(mobile) {
-            transform: translateY(-100%);
-          }
+        // @include mq(mobile) {
+        //     transform: translateY(-100%);
+        //   }
     }
 
     &__img {

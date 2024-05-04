@@ -20,6 +20,19 @@
     }
 }
 
+.footer__thumb {
+    @include mq(tablet) {
+        display: flex;
+        margin-left: 65px;
+        margin-right: 75px;
+    }
+
+    @include mq(desktop) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .center {
     display: block;
     text-align: center;
@@ -30,14 +43,14 @@
     }
 }
 
-.footer--iner {
-    padding-left: 15px;
-    padding-right: 15px;
+// .footer--iner {
+//     padding-left: 15px;
+//     padding-right: 15px;
 
-    @include mq(desktop) {
-        padding: 0;
-    }
-}
+//     @include mq(desktop) {
+//         padding: 0;
+//     }
+// }
 
 
 .logo--footer {

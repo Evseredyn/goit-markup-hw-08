@@ -39,7 +39,12 @@
     }
 
     transform: translate(-50%, -50%) scale(1);
-    padding: 40px;
+    padding: 30px;
+
+    @include mq(tablet) {
+        padding: 40px;
+    }
+
     background-color: $color-white-bg;
     border: rgba(0, 0, 0,0.1);
     border-radius: 4px;
@@ -164,19 +169,27 @@
 
     &__policy-option {
     display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 20px;
     font-family: $main-font;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.17;
+    letter-spacing: 0.03em;
+    
+    @include mq(tablet) {
+        font-size: 12px;
+    }
+
     @include mq(desktop) {
         font-size: 14px;
         line-height: 1.7;
     }
-    // letter-spacing: 1.03px;
+
     color: $color-text
     }
 

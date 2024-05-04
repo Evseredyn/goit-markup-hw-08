@@ -7,7 +7,7 @@
       width: 100%;
     }
     @include mq(desktop) {
-       width: 100%;
+       max-width: 1600px;
     }
 
    margin-left: auto;
@@ -64,7 +64,14 @@
        font-weight: 900;
        letter-spacing: 0.06em;
        text-transform: uppercase;
-            
+      
+       @include mq(tablet) {
+         margin: 0 204px;
+         margin-bottom: 30px;
+         width: 360px;
+         font-size: 26px;
+         line-height: 1.36;
+      }
       @include mq(desktop) {
          width: 700px;
          font-size: 44px;
