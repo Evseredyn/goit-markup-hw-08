@@ -40,6 +40,7 @@
 
     transform: translate(-50%, -50%) scale(1);
     padding: 30px;
+    padding-top: 60px;
 
     @include mq(tablet) {
         padding: 40px;
@@ -182,7 +183,7 @@
     letter-spacing: 0.03em;
     
     @include mq(tablet) {
-        font-size: 12px;
+        font-size: 12px;  
     }
 
     @include mq(desktop) {

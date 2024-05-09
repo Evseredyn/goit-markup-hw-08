@@ -516,8 +516,8 @@ img {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), -webkit-image-set(url(../images/hero/bg-hero_sm.webp) 1x);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/hero/bg-hero_sm.webp) 1x);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 @media screen and (min-width: 480px) {
   .hero {
@@ -576,6 +576,12 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_lg@2x.jpg);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), -webkit-image-set(url(../images/hero/bg-hero_lg@2x.webp) 2x);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/hero/bg-hero_lg@2x.webp) 2x);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .hero__title {
@@ -1266,6 +1272,7 @@ img {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   padding: 30px;
+  padding-top: 60px;
   background-color: #FFFFFF;
   border: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
