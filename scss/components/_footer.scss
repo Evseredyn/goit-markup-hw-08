@@ -12,6 +12,10 @@
     @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-left: 75px;
+        padding-right: 90px;
     }
 
     @include mq(desktop) {
@@ -20,18 +24,18 @@
     }
 }
 
-.footer__thumb {
-    @include mq(tablet) {
-        display: flex;
-        margin-left: 65px;
-        margin-right: 75px;
-    }
+// .footer__thumb {
+//     @include mq(tablet) {
+//         display: flex;
+//         align-items: baseline;
 
-    @include mq(desktop) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
+//     }
+
+//     @include mq(desktop) {
+//         margin-left: 0;
+//         margin-right: 0;
+//     }
+// }
 
 .center {
     display: block;
@@ -43,14 +47,14 @@
     }
 }
 
-// .footer--iner {
-//     padding-left: 15px;
-//     padding-right: 15px;
+.footer--iner {
+    padding-left: 15px;
+    padding-right: 15px;
 
-//     @include mq(desktop) {
-//         padding: 0;
-//     }
-// }
+    @include mq(desktop) {
+        padding: 0;
+    }
+}
 
 
 .logo--footer {
@@ -101,7 +105,7 @@
     margin-bottom: 60px;
 
     @include mq(tablet) {
-        margin-left: 250px;
+        // margin-left: auto;
         margin-top: 0px;
         margin-bottom: 0px;
     }
