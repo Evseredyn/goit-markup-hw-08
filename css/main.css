@@ -1273,7 +1273,7 @@ img {
   top: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  padding: 30px;
+  padding: 25px;
   padding-top: 60px;
   background-color: #FFFFFF;
   border: rgba(0, 0, 0, 0.1);
@@ -1289,7 +1289,7 @@ img {
 @media screen and (max-width: 479px) {
   .modal {
     min-width: 95%;
-    min-height: 609px;
+    height: 100%;
     overflow-y: auto;
   }
 }
